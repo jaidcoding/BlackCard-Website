@@ -40,7 +40,7 @@ export default function VideoSection() {
       <div className="container mx-auto px-4">
         <div className="max-w-2xl mx-auto">
           <h2 className="text-3xl md:text-4xl font-bold text-white text-center mb-12">
-            Watch BlackCard in Action
+            BlackCard in Action
           </h2>
           <div className="relative rounded-[3rem] overflow-hidden shadow-2xl mb-12 mx-auto w-[280px] aspect-[9/19.5] border-8 border-white">
             <div className="absolute inset-x-2 inset-y-2 -bottom-4 bg-neutral-900">

@@ -21,7 +21,7 @@ export default function Hero() {
   ];
 
   return (
-    <section className="min-h-screen flex flex-col items-center bg-black text-white relative pt-24">
+    <section className="min-h-screen flex flex-col items-center bg-black text-white relative pt-48">
       <div className="container mx-auto px-4 text-center">
         <h1 className="text-5xl md:text-7xl font-bold mb-6">
           BlackCard
