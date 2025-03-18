@@ -8,7 +8,7 @@ export default function TermsAndConditions() {
       <section className="mb-8">
         <h2 className="text-2xl font-semibold mb-4">1. Acceptance of Terms</h2>
         <p className="mb-4">
-          By downloading, installing, or using the BlackCard app ("App"), you agree to be bound by these Terms and Conditions. If you do not agree to these terms, do not use the App.
+          By downloading, installing, or using the BlackCard app (&quot;App&quot;), you agree to be bound by these Terms and Conditions. If you do not agree to these terms, do not use the App.
         </p>
       </section>
 
@@ -65,7 +65,7 @@ export default function TermsAndConditions() {
       <section className="mb-8">
         <h2 className="text-2xl font-semibold mb-4">8. Disclaimer of Warranties</h2>
         <p className="mb-4">
-          The App is provided "as is" without any warranty of any kind. We do not guarantee that the App will be uninterrupted, secure, or error-free.
+          The App is provided &quot;as is&quot; without any warranty of any kind. We do not guarantee that the App will be uninterrupted, secure, or error-free.
         </p>
       </section>
 
@@ -79,7 +79,7 @@ export default function TermsAndConditions() {
       <section className="mb-8">
         <h2 className="text-2xl font-semibold mb-4">10. Changes to Terms</h2>
         <p className="mb-4">
-          We reserve the right to modify these terms at any time. We will notify you of any changes by posting the new terms on the App and updating the "Last Updated" date.
+          We reserve the right to modify these terms at any time. We will notify you of any changes by posting the new terms on the App and updating the &quot;Last Updated&quot; date.
         </p>
       </section>
 
