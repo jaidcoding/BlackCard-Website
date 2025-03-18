@@ -42,7 +42,7 @@ export default function About() {
         <div className="flex flex-col items-center">
           <p className={`text-gray-300 text-lg text-center max-w-2xl mb-12 transition-all duration-1000 delay-200 ${isVisible ? 'opacity-100 translate-y-0' : 'opacity-0 translate-y-10'}`}>
             BlackCard brings elegance and simplicity to the classic game of Blackjack. 
-            We've stripped away the complexity, creating a refined experience that 
+            We&apos;ve stripped away the complexity, creating a refined experience that 
             focuses on what truly matters – the pure enjoyment of the game.
           </p>
           <p className="text-gray-300 text-center max-w-2xl mx-auto mb-8">

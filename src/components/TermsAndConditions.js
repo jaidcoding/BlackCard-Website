@@ -49,7 +49,7 @@ export default function TermsAndConditions() {
         <ul className="list-disc ml-6 mb-4">
           <li>Use the App for any illegal purpose</li>
           <li>Attempt to gain unauthorized access to the App</li>
-          <li>Interfere with or disrupt the App's security features</li>
+          <li>Interfere with or disrupt the App&apos;s security features</li>
           <li>Share your account credentials with others</li>
           <li>Use the App to transmit harmful code or malware</li>
         </ul>

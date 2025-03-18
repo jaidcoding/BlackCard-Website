@@ -12,23 +12,21 @@ export default function VideoSection() {
       (entries) => {
         entries.forEach((entry) => {
           if (entry.isIntersecting) {
-            videoRef.current?.play();
             setIsVisible(true);
-          } else {
-            videoRef.current?.pause();
           }
         });
       },
-      { threshold: 0.5 }
+      { threshold: 0.2 }
     );
 
-    if (videoRef.current) {
-      observer.observe(videoRef.current);
+    const videoElement = videoRef.current;
+    if (videoElement) {
+      observer.observe(videoElement);
     }
 
     return () => {
-      if (videoRef.current) {
-        observer.unobserve(videoRef.current);
+      if (videoElement) {
+        observer.unobserve(videoElement);
       }
     };
   }, []);
