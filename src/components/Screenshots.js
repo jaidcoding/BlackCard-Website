@@ -9,6 +9,45 @@ import sitScreen from '../images/SitScreen.png';
 import screen21 from '../images/21Screen.png';
 import yourMoveScreen from '../images/YourMoveScreen.png';
 
+const screenshots = [
+  {
+    src: homeScreen,
+    alt: "BlackCard Home Screen",
+    title: "Welcome to BlackCard",
+    description: "Elegant and intuitive home screen showcasing our premium blackjack experience."
+  },
+  {
+    src: tableScreen,
+    alt: "BlackCard Table Screen",
+    title: "Exclusive Tables",
+    description: "Choose from our selection of private tables, each with its own unique atmosphere."
+  },
+  {
+    src: betScreen,
+    alt: "BlackCard Betting Screen",
+    title: "Strategic Betting",
+    description: "Place your bets with precision using our streamlined betting interface."
+  },
+  {
+    src: sitScreen,
+    alt: "BlackCard Seating Screen",
+    title: "Choose Your Seat",
+    description: "Select your preferred position at the table for the perfect gaming experience."
+  },
+  {
+    src: yourMoveScreen,
+    alt: "BlackCard Gameplay Screen",
+    title: "Your Move",
+    description: "Clear and intuitive gameplay interface for making your next move."
+  },
+  {
+    src: screen21,
+    alt: "BlackCard Winning Hand",
+    title: "Perfect 21",
+    description: "Experience the thrill of hitting the perfect hand with our dynamic animations."
+  }
+];
+
 export default function Screenshots() {
   const [activeSuit, setActiveSuit] = useState(0);
   const [visibleScreenshots, setVisibleScreenshots] = useState([]);
@@ -36,45 +75,6 @@ export default function Screenshots() {
     { symbol: '♦', color: 'text-red-500' },
     { symbol: '♠', color: 'text-white' },
     { symbol: '♣', color: 'text-white' },
-  ];
-
-  const screenshots = [
-    {
-      src: homeScreen,
-      alt: "BlackCard Home Screen",
-      title: "Welcome to BlackCard",
-      description: "Elegant and intuitive home screen showcasing our premium blackjack experience."
-    },
-    {
-      src: tableScreen,
-      alt: "BlackCard Table Screen",
-      title: "Exclusive Tables",
-      description: "Choose from our selection of private tables, each with its own unique atmosphere."
-    },
-    {
-      src: betScreen,
-      alt: "BlackCard Betting Screen",
-      title: "Strategic Betting",
-      description: "Place your bets with precision using our streamlined betting interface."
-    },
-    {
-      src: sitScreen,
-      alt: "BlackCard Seating Screen",
-      title: "Choose Your Seat",
-      description: "Select your preferred position at the table for the perfect gaming experience."
-    },
-    {
-      src: yourMoveScreen,
-      alt: "BlackCard Gameplay Screen",
-      title: "Your Move",
-      description: "Clear and intuitive gameplay interface for making your next move."
-    },
-    {
-      src: screen21,
-      alt: "BlackCard Winning Hand",
-      title: "Perfect 21",
-      description: "Experience the thrill of hitting the perfect hand with our dynamic animations."
-    }
   ];
 
   return (

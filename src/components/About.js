@@ -45,6 +45,9 @@ export default function About() {
             We've stripped away the complexity, creating a refined experience that 
             focuses on what truly matters – the pure enjoyment of the game.
           </p>
+          <p className="text-gray-300 text-center max-w-2xl mx-auto mb-8">
+            BlackCard isn&apos;t just another blackjack app - it&apos;s a premium gaming experience designed for those who demand excellence.
+          </p>
           <div className="grid md:grid-cols-2 gap-12 items-center w-full">
             <div className="space-y-4">
               {[
