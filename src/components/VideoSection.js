@@ -2,17 +2,40 @@
 
 import Link from 'next/link';
 import { useEffect, useRef, useState } from 'react';
+import Image from 'next/image';
 
 export default function VideoSection() {
   const videoRef = useRef(null);
   const [isVisible, setIsVisible] = useState(false);
+  const [isVideoLoaded, setIsVideoLoaded] = useState(false);
+  const [isVideoError, setIsVideoError] = useState(false);
 
   useEffect(() => {
+    // Preload the video
+    if (videoRef.current) {
+      videoRef.current.load();
+    }
+
     const observer = new IntersectionObserver(
       (entries) => {
         entries.forEach((entry) => {
           if (entry.isIntersecting) {
             setIsVisible(true);
+            if (videoRef.current) {
+              const playPromise = videoRef.current.play();
+              if (playPromise !== undefined) {
+                playPromise
+                  .then(() => {
+                    console.log('Video started playing successfully');
+                  })
+                  .catch(error => {
+                    console.error('Error playing video:', error);
+                    setIsVideoError(true);
+                  });
+              }
+            }
+          } else if (videoRef.current) {
+            videoRef.current.pause();
           }
         });
       },
@@ -27,12 +50,20 @@ export default function VideoSection() {
     return () => {
       if (videoElement) {
         observer.unobserve(videoElement);
+        videoElement.pause();
       }
     };
   }, []);
 
   const handleVideoError = (e) => {
     console.error('Video loading error:', e);
+    console.error('Video error details:', videoRef.current?.error);
+    setIsVideoError(true);
+  };
+
+  const handleVideoLoadedData = () => {
+    console.log('Video data loaded successfully');
+    setIsVideoLoaded(true);
   };
 
   return (
@@ -46,18 +77,32 @@ export default function VideoSection() {
           <div className="relative rounded-[3rem] overflow-hidden shadow-2xl mb-12 mx-auto w-[280px] aspect-[9/19.5] border-8 border-white/20 group">
             <div className="absolute inset-0 bg-gradient-to-r from-white/10 to-transparent opacity-0 group-hover:opacity-100 transition-opacity duration-500"></div>
             <div className="absolute inset-x-2 inset-y-2 -bottom-4 bg-neutral-900">
-              <video
-                ref={videoRef}
-                className="w-full h-full object-cover scale-105 transition-transform duration-500 group-hover:scale-110"
-                muted
-                playsInline
-                loop
-                onError={handleVideoError}
-                poster="/images/HomeScreen.png"
-              >
-                <source src="/videos/Gameplay.mp4" type="video/mp4" />
-                Your browser does not support the video tag.
-              </video>
+              {!isVideoError ? (
+                <video
+                  ref={videoRef}
+                  className="w-full h-full object-cover scale-105 transition-transform duration-500 group-hover:scale-110"
+                  muted
+                  playsInline
+                  loop
+                  onError={handleVideoError}
+                  onLoadedData={handleVideoLoadedData}
+                  poster="/images/HomeScreen.png"
+                  preload="auto"
+                >
+                  <source src="/videos/Gameplay.mp4" type="video/mp4" />
+                  Your browser does not support the video tag.
+                </video>
+              ) : (
+                <div className="w-full h-full flex items-center justify-center">
+                  <Image
+                    src="/images/HomeScreen.png"
+                    alt="BlackCard Gameplay"
+                    width={280}
+                    height={608}
+                    className="object-cover"
+                  />
+                </div>
+              )}
             </div>
           </div>
           <div className="text-center">
