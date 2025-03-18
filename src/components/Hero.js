@@ -21,7 +21,7 @@ export default function Hero() {
   ];
 
   return (
-    <section className="min-h-screen flex items-center justify-center bg-black text-white">
+    <section className="min-h-screen flex flex-col items-center bg-black text-white relative pt-24">
       <div className="container mx-auto px-4 text-center">
         <h1 className="text-5xl md:text-7xl font-bold mb-6">
           BlackCard
@@ -41,6 +41,19 @@ export default function Hero() {
             </span>
           ))}
         </div>
+      </div>
+      <div className="absolute bottom-48 left-1/2 transform -translate-x-1/2">
+        <svg
+          className="w-8 h-8 text-white animate-bounce"
+          fill="none"
+          strokeLinecap="round"
+          strokeLinejoin="round"
+          strokeWidth="2"
+          viewBox="0 0 24 24"
+          stroke="currentColor"
+        >
+          <path d="M19 14l-7 7m0 0l-7-7m7 7V3"></path>
+        </svg>
       </div>
       <style jsx>{`
         @keyframes bounce {

@@ -23,7 +23,7 @@ export default function Navbar() {
         </Link>
         <div>
           <button className="bg-white text-black px-8 py-3 rounded-full text-lg font-semibold hover:bg-gray-200 transition-colors">
-            Get App
+            App Coming Soon...
           </button>
         </div>
       </div>

@@ -7,14 +7,14 @@ export default function About() {
   return (
     <section id="about" className="py-20 bg-black">
       <div className="container mx-auto px-4">
-        <div className="grid md:grid-cols-2 gap-12 items-center">
-          <div className="space-y-6">
-            <h2 className="text-4xl font-bold text-white">Who We Are</h2>
-            <p className="text-gray-300 text-lg">
-              BlackCard brings elegance and simplicity to the classic game of Blackjack. 
-              We've stripped away the complexity, creating a refined experience that 
-              focuses on what truly matters – the pure enjoyment of the game.
-            </p>
+        <h2 className="text-4xl font-bold text-white text-center mb-12">Who We Are</h2>
+        <div className="flex flex-col items-center">
+          <p className="text-gray-300 text-lg text-center max-w-2xl mb-12">
+            BlackCard brings elegance and simplicity to the classic game of Blackjack. 
+            We've stripped away the complexity, creating a refined experience that 
+            focuses on what truly matters – the pure enjoyment of the game.
+          </p>
+          <div className="grid md:grid-cols-2 gap-12 items-center w-full">
             <div className="space-y-4">
               <div className="flex items-start space-x-4">
                 <div className="flex-shrink-0 w-8 h-8 bg-white rounded-full flex items-center justify-center">
@@ -61,17 +61,17 @@ export default function About() {
                 </div>
               </div>
             </div>
-          </div>
-          <div className="relative h-96 flex items-center justify-center">
-            <div className="absolute w-64 h-64 bg-gradient-to-r from-gray-800 to-gray-900 rounded-full blur-3xl opacity-30"></div>
-            <div className="relative w-48 h-48">
-              <Image
-                src={crownLogo}
-                alt="BlackCard Crown Logo"
-                fill
-                className="object-contain brightness-110"
-                priority
-              />
+            <div className="relative h-96 flex items-center justify-center">
+              <div className="absolute w-96 h-96 bg-gradient-to-r from-gray-800 to-gray-900 rounded-full blur-3xl opacity-30"></div>
+              <div className="relative w-72 h-72">
+                <Image
+                  src={crownLogo}
+                  alt="BlackCard Crown Logo"
+                  fill
+                  className="object-contain brightness-110"
+                  priority
+                />
+              </div>
             </div>
           </div>
         </div>
